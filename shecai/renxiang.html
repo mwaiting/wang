@@ -1,0 +1,483 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+<title>视觉系—人像</title>
+<style type="text/css">
+body{font-family: "微软雅黑";background:#f1f1f1}
+*{margin:0;padding:0;}
+#header{height:30px;background:#303030;color:#d8d8d8;line-height:30px;font-size:14px;}
+#set1,#set2{text-decoration:none;font-size:14px;}
+.time{float:right;font-size:14px;right:0;display: inline-block;}
+#header a{color:#d8d8d8}
+#header a:hover{color: #5cd0e9;}
+.toper{width:1024px;margin:0 auto;}
+.txt{margin:-20px 0 0 5px ;height:41px;width:300px;border:none;background: url("image/search/s_c.png");}
+  .sou{margin:-20px 0 0 -10px ;height:41px;width:78px;left:315px;background: url("image/search/s_r.png");}
+  .search{background: url("image/search/s_z.png");}
+  .p1{margin:-20px 0 0 0 ;background: url("image/search/s_z.png");height:41px;width:5px;}
+  .p1 input{border:none;outline:0;}
+  .txt,.sou,.search,.p1,.p2{position:absolute;display: inline-block;}
+.tab1{width:1024px;margin:0 auto;}
+.taber{background:#fff;padding:10px 0;}
+
+#bottom{width:100px;background: #5cd0e9;line-height:40px;font-size:14px;position:absolute;}
+#daohang li a{text-decoration:none;color: #ffffff;}
+#daohang li{list-style: none;width:100px;text-align: center;font-size:15px;padding:0 1px 0 0 ;}
+#daohang .one,#daohang li:hover{height:40px;text-align:center;line-height:40px; width:100px;background: #40b3f7;padding:5px 0;}
+
+.people{font-size: 16px;font-style: italic;font-weight: bold;font-variant: normal;color: #3CF;text-decoration: underline;}
+.order {color: #F90;border: thin none #FFF;}
+
+.tab2{float:right;width:850px;border:0;margin: 50px 50px 20px 0;clear: both;top:0;}
+#maintab{width:1024px;margin:0 auto;background: #fff}
+.page{margin:0 auto;text-align: center;height:50px;line-height:50px;}
+.page a{text-decoration: none;}
+.clear{clear: both;}
+
+.foot3{  background: #fff;height:100px;;clear:both;}
+.info{background:#000;}
+.info_list{width:1024px;margin:0 auto;height:30px;line-height:30px;text-align: center;}
+.info span{color:#fff;margin:0;font-size:14px;display: inline-block;}
+.info a{color:#d4d4d4;text-decoration:none;font-size:14px;padding:0 20px;}
+.info_list li{list-style: none;float:left;width:80px;text-align: center;margin:0 auto;}
+.info a:hover{color:#36aaea }
+
+.contact{width:1024px;height: 80px;;margin:0 auto;}
+.cont{width:300px;margin:0 auto;padding:30px 0 50px 0;}
+.contact_us{list-style: none;float:left;margin:0 20px 0 0;}
+.contact_us>div{display: inline-block;height:28px;line-height:28px;float:left;}
+.contact_us a div{width:31px;height:28px;}
+.contact_us .img1{display:inline-block;background: url("image/bg-contact.png")-1px 0 no-repeat}
+.contact_us .img2{display:inline-block;background: url("image/bg-contact.png") -35px 0 no-repeat}
+.contact_us .img3{display:inline-block;background: url("image/bg-contact.png")  -66px 0 no-repeat}
+.contact_us .img4{display:inline-block;background: url("image/bg-contact.png")  -97px 0 no-repeat}
+.contact_us .img5{display:inline-block;background: url("image/bg-contact.png")  -131px 0 no-repeat}
+.contact_us .img1:hover{background: url("image/bg-contact.png")-1px -39px no-repeat}
+.contact_us .img2:hover{background: url("image/bg-contact.png") -35px -39px no-repeat}
+.contact_us .img3:hover{background: url("image/bg-contact.png")  -66px -39px no-repeat}
+.contact_us .img4:hover{background: url("image/bg-contact.png")  -97px -39px no-repeat}
+.contact_us .img5:hover{background: url("image/bg-contact.png")  -131px -39px no-repeat}
+.taber .tab1 tr td p{
+  color: #0CF;text-align: center;
+}
+#moocBox {
+  height: 70px;
+  width: 200px;
+  margin-left: 25px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+ol li a {
+  height: 24px;
+  text-decoration: none;
+  color: #000000;
+}
+ol li a:hover{
+  color:#5cd0e9;
+  text-decoration: underline;
+}
+</style>
+  <script>
+  window.onload = function(){
+//        系统时间对象
+    //alert(new Date());//当前系统时间对象
+    var oBody = document.body;
+    setInterval(fnTime,1000);
+    fnTime();
+    function fnTime(){
+      var myTime = new Date();
+//number
+      var iYear = myTime.getFullYear();
+      var iMonth = myTime.getMonth() + 1;
+      var iDate = myTime.getDate();
+      var iWeek = myTime.getDay();
+      var iHours = myTime.getHours();
+      var iMin = myTime.getMinutes();
+      var iSec = myTime.getSeconds();
+      var oTime=document.getElementById('time')
+      var str = '';
+      if (iWeek === 0)iWeek = '星期日';
+      if (iWeek === 1)iWeek = '星期一';
+      if (iWeek === 2)iWeek = '星期二';
+      if (iWeek === 3)iWeek = '星期三';
+      if (iWeek === 4)iWeek = '星期四';
+      if (iWeek === 5)iWeek = '星期五';
+      if (iWeek === 6)iWeek = '星期六';
+      str = iYear + '年' + iMonth + '月' + iDate + '日' + ' ' + iWeek + ' '
+              + toTwo(iHours )+ ':' + toTwo(iMin) + ':' + toTwo(iSec);
+//alert(str);
+      oTime.innerHTML = str;
+    }
+  };
+  //alert(toTwo(5))
+  function toTwo(n){
+    //        if(n<10){
+    //            return '0'+n;
+    //        }else{
+    //            return ''+ n;
+    //        }
+    return n<10 ? '0'+n :''+ n;
+  }
+</script>
+</head>
+
+<body>
+<div>
+  <div id="header">
+    <div  class="toper" >
+      <a href="#" id="set1" onclick="alert('网页作业没有此功能哦！');" >设为首页</a>
+      <a href="#" id="set2" onclick="alert('网页作业没有此功能哦！');" >&nbsp;收藏本站</a>
+      <span class="time" id="time"></span>
+    </div>
+  </div>
+</div>
+<div class="taber">
+<table class="tab1" width="1024" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="300"><img src="image/logo.png"/></td>
+          <td width="500">
+      <div class="search">
+      <p class="p1"></p>
+      <input type="text" class="txt"/>
+      <p class="p2"></p>
+      <a href="#" class="sou" onclick="alert('网页作业没有此功能哦！');" ></a>
+    </div>
+          </td>
+          <td width="200">
+            <h4>公告栏</h4>
+            <div id="moocBox">
+              <ol id="con1">
+                <li><a href="">1.更多活动敬请期待。。。</a></li>
+                <li><a href="">2.更多活动敬请期待。。。</a></li>
+                <li><a href="">3.更多活动敬请期待。。。</a></li>
+                <li><a href="">4.更多活动敬请期待。。。</a></li>
+                <li><a href="">5.更多活动敬请期待。。。</a></li>
+                <li><a href="">6.更多活动敬请期待。。。</a></li>
+              </ol>
+              <ol id="con2"> </ol>
+            </div>
+
+         </td>
+        </tr>
+      </table>
+    </div>
+
+<div id="maintab">
+  <div id="bottom" >
+    <ul id="daohang">
+      <li><a href="index.html" target="_blank">主页</a></li>
+      <li class="one"><a href="renxiang.html">人像</a></li>
+      <li><a href="hunsha.html" target="_blank">婚纱</a></li>
+      <li><a href="fengjing.html" target="_blank">风景</a></li>
+      <li><a href="jingwu.html" target="_blank">静物</a></li>
+      <li><a href="renwen.html" target="_blank">人文</a></li>
+      <li><a href="dongwu.html" target="_blank">动物</a></li>
+      <li><a href="meishi.html" target="_blank">美食</a></li>
+      <li><a href="suishoupai.html" target="_blank">随手拍</a></li>
+    </ul>
+  </div>
+  
+<table class="tab2">
+  <tr> 
+    <td width="100" height="150" rowspan="3" align="center" valign="middle" class="order" >01</td>
+    <td width="200" height="50"><span class="people"><span class="people"><a href="frame/Frameset-3.html" class="people">喜欢摄影的人</a></span></span></td>
+    <td width="150" height="150" rowspan="3"><img src="image/rx.jpg" width="150" height="150" alt="视觉系—人像"></td>
+
+    <td width="100" height="150" rowspan="3" align="center" valign="middle" class="order">02</td>
+    <td width="200" height="50"><a href="frame/Frameset-3.html" class="people">喜欢摄影的人</a></td>
+    <td width="150" height="150" rowspan="3"><img src="image/rx1.jpg" width="150" height="150"></td>
+  </tr>
+  <tr>
+    <td width="200" height="50">视觉系—人像</td>
+    <td width="200" height="50">视觉系—人像</td>
+  </tr>
+  <tr>
+    <td width="200" height="50"><p>喜欢100000</p></td>
+    <td width="200" height="50">喜欢100000</td>
+  </tr>
+  <tr>
+  <td colspan="8">
+  <hr>
+  </td>
+  </tr>
+  <tr>
+
+    <td width="100" height="150" rowspan="3" align="center" valign="middle" class="order">03</td>
+    <td width="200" height="50"><a href="frame/Frameset-3.html" class="people">喜欢摄影的人</a></td>
+    <td width="150" height="150" rowspan="3"><img src="image/rx2.jpg" width="150" height="150" alt="视觉系—人像"></td>
+
+
+    <td width="100" height="150" rowspan="3" align="center" valign="middle" class="order">04</td>
+    <td width="200" height="50"><a href="frame/Frameset-3.html" class="people">喜欢摄影的人</a></td>
+    <td width="150" height="150" rowspan="3"><img src="image/rx3.jpg" width="150" height="150"></td>
+  </tr>
+  <tr>
+    <td width="200" height="50">视觉系—人像</td>
+    <td width="200" height="50">视觉系—人像</td>
+  </tr>
+  <tr>
+    <td width="200" height="50">喜欢100000</td>
+    <td width="200" height="50">喜欢100000</td>
+  </tr>
+   <tr>
+  <td colspan="8">
+   <hr>
+  </td>
+  </tr>
+  <tr>
+
+    <td width="100" height="150" rowspan="3" align="center" valign="middle" class="order">05</td>
+    <td width="200" height="50"><a href="frame/Frameset-3.html" class="people">喜欢摄影的人</a></td>
+    <td width="150" height="150" rowspan="3"><img src="image/rx4.jpg" width="150" height="150"></td>
+
+    <td width="100" height="150" rowspan="3" align="center" valign="middle" class="order">06</td>
+    <td width="200" height="50"><a href="frame/Frameset-3.html" class="people">喜欢摄影的人</a></td>
+    <td width="150" height="150" rowspan="3"><img src="image/rx5.jpg" width="150" height="150"></td>
+  </tr>
+  <tr>
+    <td width="200" height="50">视觉系—人像</td>
+    <td width="200" height="50">视觉系—人像</td>
+  </tr>
+  <tr>
+    <td width="200" height="50">喜欢100000</td>
+    <td width="200" height="50">喜欢100000</td>
+  </tr>
+   <tr>
+  <td colspan="8">
+  <hr>
+  </td>
+  </tr>
+  <tr>
+
+    <td width="100" height="150" rowspan="3" align="center" valign="middle" class="order">07</td>
+    <td width="200" height="50"><a href="frame/Frameset-3.html" class="people">喜欢摄影的人</a></td>
+    <td width="150" height="150" rowspan="3"><img src="image/rx6.jpg" width="150" height="150"></td>
+    
+
+    <td width="100" height="150" rowspan="3" align="center" valign="middle" class="order">08</td>
+    <td width="200" height="50"><a href="frame/Frameset-3.html" class="people">喜欢摄影的人</a></td>
+    <td width="150" height="150" rowspan="3"><img src="image/rx7.jpg" width="150" height="150"></td>
+  </tr>
+  <tr>
+    <td width="200" height="50">视觉系—人像</td>
+    <td width="200" height="50">视觉系—人像</td>
+  </tr>
+  <tr>
+    <td width="200" height="50">喜欢100000</td>
+    <td width="200" height="50">喜欢100000</td>
+  </tr>
+   <tr>
+  <td colspan="8">
+    <hr>
+  </td>
+  </tr>
+  <tr>
+
+    <td width="100" height="150" rowspan="3" align="center" valign="middle" class="people"><span class="order">09</span></td>
+    <td width="200" height="50"><a href="frame/Frameset-3.html" class="people">喜欢摄影的人</a></td>
+    <td width="150" height="150" rowspan="3"><img src="image/rx8.jpg" width="150" height="150"></td>
+
+    <td width="100" height="150" rowspan="3" align="center" valign="middle" class="order">10</td>
+    <td width="200" height="50"><a href="frame/Frameset-3.html" class="people">喜欢摄影的人</a></td>
+    <td width="150" height="150" rowspan="3"><img src="image/rx9.jpg" width="150" height="150"></td>
+  </tr>
+  <tr>
+    <td width="200" height="50">视觉系—人像</td>
+    <td width="200" height="50">视觉系—人像</td>
+  </tr>
+  <tr>
+    <td width="200" height="50">喜欢100000</td>
+    <td width="200" height="50">喜欢100000</td>
+  </tr>
+   <tr>
+  <td colspan="8">
+    <hr>
+  </td>
+  </tr>
+  <tr>
+
+    <td width="100" height="150" rowspan="3" align="center" valign="middle" class="order">11</td>
+    <td width="200" height="50"><a href="frame/Frameset-3.html" class="people">喜欢摄影的人</a></td>
+    <td width="150" height="150" rowspan="3"><img src="image/rx.jpg" width="150" height="150"></td>
+
+    <td width="100" height="150" rowspan="3" align="center" valign="middle" class="order">12</td>
+    <td width="200" height="50"><a href="frame/Frameset-3.html" class="people">喜欢摄影的人</a></td>
+    <td width="150" height="150" rowspan="3"><img src="image/rx1.jpg" width="150" height="150"></td>
+  </tr>
+  <tr>
+    <td width="200" height="50">视觉系—人像</td>
+    <td width="200" height="50">视觉系—人像</td>
+  </tr>
+  <tr>
+    <td width="200" height="50">喜欢100000</td>
+    <td width="200" height="50">喜欢100000</td>
+  </tr>
+   <tr>
+  <td colspan="8">
+    <hr>
+  </td>
+  </tr>
+  <tr>
+
+    <td width="100" height="150" rowspan="3" align="center" valign="middle" class="order">13</td>
+    <td width="200" height="50"><a href="frame/Frameset-3.html" class="people">喜欢摄影的人</a></td>
+    <td width="150" height="150" rowspan="3"><img src="image/rx2.jpg" width="150" height="150"></td>
+
+    <td width="100" height="150" rowspan="3" align="center" valign="middle" class="order">14</td>
+    <td width="200" height="50"><a href="frame/Frameset-3.html" class="people">喜欢摄影的人</a></td>
+    <td width="150" height="150" rowspan="3"><img src="image/rx3.jpg" width="150" height="150"></td>
+  </tr>
+  <tr>
+    <td width="200" height="50">视觉系—人像</td>
+    <td width="200" height="50">视觉系—人像</td>
+  </tr>
+  <tr>
+    <td width="200" height="50">喜欢100000</td>
+    <td width="200" height="50">喜欢100000</td>
+  </tr>
+   <tr>
+  <td colspan="8">
+    <hr>
+  </td>
+  </tr>
+  <tr>
+  
+    <td width="100" height="150" rowspan="3" align="center" valign="middle" class="order">15</td>
+    <td width="200" height="50"><a href="frame/Frameset-3.html" class="people">喜欢摄影的人</a></td>
+    <td width="150" height="150" rowspan="3"><img src="image/rx4.jpg" width="150" height="150"></td>
+  
+
+    <td width="100" height="150" rowspan="3" align="center" valign="middle" class="order">16</td>
+    <td width="200" height="50"><a href="frame/Frameset-3.html" class="people">喜欢摄影的人</a></td>
+    <td width="150" height="150" rowspan="3"><img src="image/rx5.jpg" width="150" height="150"></td>
+  </tr>
+  <tr>
+    <td width="200" height="50">视觉系—人像</td>
+    <td width="200" height="50">视觉系—人像</td>
+  </tr>
+  <tr>
+    <td width="200" height="50">喜欢100000</td>
+    <td width="200" height="50">喜欢100000</td>
+  </tr>
+   <tr>
+  <td colspan="8">
+    <hr>
+  </td>
+  </tr>
+  <tr>
+  
+    <td width="100" height="150" rowspan="3" align="center" valign="middle" class="order">17</td>
+    <td width="200" height="50"><a href="frame/Frameset-3.html" class="people">喜欢摄影的人</a></td>
+    <td width="150" height="150" rowspan="3"><img src="image/rx6.jpg" width="150" height="150"></td>
+
+    <td width="100" height="150" rowspan="3" align="center" valign="middle" class="order">18</td>
+    <td width="200" height="50"><a href="frame/Frameset-3.html" class="people">喜欢摄影的人</a></td>
+    <td width="150" height="150" rowspan="3"><img src="image/rx7.jpg" width="150" height="150"></td>
+  </tr>
+  <tr>
+    <td width="200" height="50">视觉系—人像</td>
+    <td width="200" height="50">视觉系—人像</td>
+  </tr>
+  <tr>
+    <td width="200" height="50">喜欢100000</td>
+    <td width="200" height="50">喜欢100000</td>
+  </tr>
+   <tr>
+  <td colspan="8">
+    <hr>
+  </td>
+  </tr>
+  <tr>
+
+    <td width="100" height="150" rowspan="3" align="center" valign="middle" class="order">19</td>
+    <td width="200" height="50"><a href="frame/Frameset-3.html" class="people">喜欢摄影的人</a></td>
+    <td width="150" height="150" rowspan="3"><img src="image/rx8.jpg" width="150" height="150"></td>
+    
+    <td width="100" height="150" rowspan="3" align="center" valign="middle" class="order">20</td>
+    <td width="200" height="50"><a href="frame/Frameset-3.html" class="people">喜欢摄影的人</a></td>
+    <td width="150" height="150" rowspan="3"><img src="image/rx9.jpg" width="150" height="150"></td>
+  </tr>
+  <tr>
+    <td width="200" height="50">视觉系—人像</td>
+    <td width="200" height="50">视觉系—人像</td>
+  </tr>
+  <tr>
+    <td width="200" height="50">喜欢100000</td>
+    <td width="200" height="50">喜欢100000</td>
+  </tr>
+   <tr>
+  <td colspan="8">
+    <hr>
+  </td>
+  </tr>
+  <tr>
+    <td colspan="7">
+      <div  class="page">
+        <span>
+      <a href="#" onclick="alert('网页作业没有此功能哦！');" >首页</a> &nbsp;
+          <a href="#" onclick="alert('网页作业没有此功能哦！');" >1</a>&nbsp;&nbsp;/&nbsp;&nbsp;
+          <a href="#" onclick="alert('网页作业没有此功能哦！');" >2</a>&nbsp;&nbsp;/&nbsp;&nbsp;
+          <a href="#" onclick="alert('网页作业没有此功能哦！');" >3</a> &nbsp;&nbsp;/&nbsp;&nbsp;
+          <a href="#" onclick="alert('网页作业没有此功能哦！');" >4</a>&nbsp;&nbsp;/&nbsp;
+          <a href="#" onclick="alert('网页作业没有此功能哦！');" >5</a>&nbsp;&nbsp;/&nbsp;&nbsp;
+          <a href="#" onclick="alert('网页作业没有此功能哦！');" >6</a> &nbsp;&nbsp;/&nbsp;&nbsp;
+          <a href="#" onclick="alert('网页作业没有此功能哦！');" >7</a>&nbsp;
+          <a href="#" onclick="alert('网页作业没有此功能哦！');" >></a>
+          <a href="#" onclick="alert('网页作业没有此功能哦！');" > 末页</a>
+        </span>
+        </div>
+    </td>
+  </tr>
+</table>
+  <div class="clear"></div>
+</div>
+<div class="foot3">
+  <div class="contact">
+    <div class="cont">
+      <div class="contact_us">
+        <div><h4>摄彩在别处：</h4></div>
+        <a href="" onclick="alert('网页作业没有此功能哦！');" ><div class="img1" ></div></a>
+        <a href="" onclick="alert('网页作业没有此功能哦！');" ><div class="img2"></div></a>
+        <a href="" onclick="alert('网页作业没有此功能哦！');" ><div class="img3"></div></a>
+        <a href="" onclick="alert('网页作业没有此功能哦！');" ><div class="img4"></div></a>
+        <a href="" onclick="alert('网页作业没有此功能哦！');" ><div class="img5"></div></a>
+      </div>
+    </div>
+  </div>
+  <div class="info">
+    <div class="info_list">
+      <span><a href="index.html" target="_blank">摄彩主页</a> |</span>
+      <span><a href="index.html#linker" target="_blank">友情链接</a> |</span>
+      <span><a href="login.html" target="_blank">登录账号</a> |</span>
+      <span><a href="register.html" target="_blank">加入我们</a> |</span>
+      <span><a href="index.html#linker" target="_blank" >联系我们</a></span>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+
+  var xiangshang = document.getElementById("moocBox");
+  var con1 = document.getElementById("con1");
+  var con2 = document.getElementById("con2");
+  con2.innerHTML = con1.innerHTML;
+  function Marquee(){
+    if(con2.offsetHeight-xiangshang.scrollTop<=0){
+      xiangshang.scrollTop-=con1.offsetHeight;
+    }else{
+      xiangshang.scrollTop++;
+    }
+  }
+  var timg = 50;
+
+  var myScroll = setInterval("Marquee()",timg);
+  xiangshang.onmouseover = function(){
+    clearInterval(myScroll);
+  };
+  xiangshang.onmouseout = function(){
+    myScroll = setInterval("Marquee()",timg);
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,398 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>个人项目</title>
+
+	<!-- 引用css -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/chart-style.css">
+	<link rel="stylesheet" href="css/ul-ol-style.css" media="screen" type="text/css" />
+	<link href="css/circle-style.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="css/menu-style.css">
+	<link rel="stylesheet" href="css/type-style.css" media="screen" type="text/css" />
+	<link rel="stylesheet" href="css/font-style.css" media="screen" type="text/css" />
+
+	<!-- 引用js -->
+	<script type="text/javascript" src="js/circle-js/jquery.js" ></script>
+	<script type="text/javascript" src="js/circle-js/raphael.js" ></script>
+	<script type="text/javascript" src="js/circle-js/init.js" ></script>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/global.js"></script>
+	<script type="text/javascript" src="js/waypoints.min.js"></script>
+	<script type="text/javascript" src="js/js.js"></script>
+
+</head>
+
+
+<body class="loading-process">
+<div class="loading">
+	<div class="loading-circle"></div>
+	<div class="loading-avatar"><img src="imgs/img.png" alt="" width="100px" height="100px"></div>
+	<div class="loading-info">正在努力加载中...</div>
+</div>
+<div class="section-header">
+	<div class="section">
+		<nav class="nav" role="navigation">
+			<ul>
+				<li class="nav-about fade fade1"><a href="#about">关于</a></li>
+				<li class="nav-works fade fade4"><a href="#works">作品</a></li>
+				<li class="fade back-home"><a href="#top">首页</a></li>
+				<li class="nav-skill fade fade2"><a href="#skill">能力</a></li>
+				<li class="nav-contact fade fade3"><a href="#contact">联系</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="nav-bg"></div>
+</div>
+<div class="home-bg">
+	<img src="imgs/home-bg.jpg" alt="" width="100%" height="667">
+</div>
+<div class="section-wrap section-fristpage" data-slide="1"  >
+	<div class="section">
+		<div class="section-content">
+			<p class="fade fade1 font"><span class="font-text"></span></p>
+			<p class="fade fade1 font"><span class="font-text">王孔敏</span></p>
+			<p class="fade fade2 font"><span class="font-text">WEB前端开发工程师 · 离职 </span></p>
+			<p class="fade fade3 font"><a href="http://weibo.com/wkmvip" target="_blank" class="font-text">
+				<b class="font-weibo"></b>谢谢你呀长得这么好看还肯关注我
+			</a>
+			</p>
+			<p class="fade fade4 font" >
+				<span class="font-text">
+					<a target="_blank" href="mailto:wangkongmin@qq.com" ><b class="font-email"></b>wangkongmin@qq.com</a>
+				  <a target="_blank" href="https://github.com/wkmcoder" ><b class="font-github"></b>wkmcoder</a>
+			  </span>
+			</p>
+			<p class="fade fade5 font"><span class="font-text">和世界交手的这许多年，你是否光彩依旧，兴致盎然？</span></p>
+		</div>
+		<a class="button2 scroll-tip fade fade4" data-slide="3" style="background:url(imgs/bg-down-arrow.png) no-repeat;" title="向下滚动">向下滚动</a>
+	</div>
+</div>
+
+
+<div id="about" data-slide="2" data-stellar-background-ratio="0.3" class="section-wrap section-about">
+	<div class="section">
+		<div class="about-content clearfix section-content">
+			<div id="convo" data-from="Hr Me">
+				<div id="convo-content">
+					<ul class="chat-thread">
+						<li>您好，我对贵公司的发布的web前端开发工程师职位很感兴趣，方便聊聊吗？</li>
+						<li>可以呀，先介绍一下你自己吧。</li>
+						<li>好的</li>
+						<li style="display: none"></li>
+						<li>我叫王孔敏，福建三明人，今年25岁</li>
+						<li style="display: none"></li>
+						<li>2013年考入莆田学院电子信息工程专业，2017年7月拿到毕业证书及学士学位证书，</li>
+						<li style="display: none"></li>
+						<li>在大学期间学习web前端相关技术,熟悉W3C标准，对结构、表现、行为分离及Web语义化等有所理解;</li>
+						<li style="display: none"></li>
+						<li>了解JQuery、Bootstrap等主流JS框架；</li>
+						<li style="display: none"></li>
+						<li>能够熟练应用HTML+CSS+JavaScript技术，掌握DIV+CSS页面架构和布局方式</li>
+						<li style="display: none"></li>
+						<li>有独立开发网站经验，能独立完成符合W3C标准的网站前端页面</li>
+						<li style="display: none"></li>
+						<li>对HTML5，CSS3有一定的了解，使用web API实现视觉特效。</li>
+						<li>嗯，你做过什么项目呢？</li>
+						<li>项目有几个：摄彩--图片分享社区、ZAZAR美食网、仿京东官网首页、仿百度官网首页、仿豆瓣官网首页，
+							目前还在做的有小米商城首页和淘宝首页。
+						</li>
+						<li>可以说下都用了哪些技术吗？</li>
+						<li>有原生JS，HTML5，CSS3，WEB API，jQuery框架，bootstrap框架等</li>
+						<li>哦，那你用得是什么开发工具呢？</li>
+						<li>开发我一般用webstorm和sublime text3这两种，对Photoshop和fireworks也挺熟悉的</li>
+						<li>平常都有说明兴趣爱好呢？</li>
+						<li>闲暇之余看看书玩玩游戏，有时候也会看看微博微信、逛逛论坛，比如SegmentFault、掘金、GitHub等</li>
+						<li>这样啊，那什么时候找个时间我们当面聊聊？</li>
+						<li>好的，谢谢您给我这个机会！</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<a class="button2 dark-button2 scroll-tip" data-slide="3" style="background:url(imgs/bg-down-arrow.png)no-repeat;" title="向下滚动">向下滚动</a>
+</div>
+
+
+<div id="works" class="section-wrap section-works" data-slide="3" >
+	<div class="section">
+		<div class="works-content section-content">
+			<h1>作品</h1>
+			<div class="works-list clearfix">
+				<div class="works-item first fade fade1">
+					<a href="#" target="_blank">
+						<img src="imgs/shecai.jpg" alt="" width="300" height="180">
+						<div class="work-info">
+							<a class="click" href="shecai/index.html" target="mainFrame">摄彩--图片分享社区</a>
+							<p>注册用户分享交流摄影作品</p>
+						</div>
+					</a>
+				</div>
+				<div class="works-item fade fade2">
+					<a href="#" target="_blank">
+						<img src="imgs/zazar.jpg" alt="" width="300" height="180" >
+						<div class="work-info">
+							<a class="click" href="ZAZAR/index.html" target="mainFrame">ZAZAR美食网</a>
+							<p>简单、美观的美食网站</p>
+						</div>
+					</a>
+				</div>
+				<div  style="margin-right: 0;" class="works-item fade fade3">
+					<a href="#/" target="_blank">
+						<img src="imgs/jingdong.jpg" alt="" width="300" height="180">
+						<div class="work-info">
+							<a class="click" href="jingdong/index.html" target="mainFrame">仿京东官网首页</a>
+							<p>二次开发 个人美化 </p>
+						</div>
+					</a>
+				</div>
+				<div class="works-item fade fade2">
+					<a>
+						<img src="imgs/douban.jpg" alt="" width="300" height="180">
+						<div class="work-info">
+							<a class="click" href="douban/index.html" target="mainFrame">仿豆瓣官网首页</a>
+							<p>相似度极高的豆瓣官网首页</p>
+						</div>
+					</a>
+				</div>
+				<div class="works-item fade fade4">
+					<a href="#" target="_blank">
+						<img src="imgs/baidu.jpg" alt="" width="300" height="180">
+						<div class="work-info">
+							<a class="click" href="baidu/index.html" target="mainFrame">仿百度官网首页</a>
+							<p>仿百度官网首页</p>
+						</div>
+					</a>
+				</div>
+
+			</div>
+			<a id="more-link" href="" target="_blank" >查看更多</a>
+		</div>
+		<a class="button2 scroll-tip fade fade4" data-slide="4" style="background:url(imgs/bg-down-arrow.png) no-repeat;" title="向下滚动">向下滚动</a>
+	</div>
+</div>
+
+
+<div id="skill" class="section-wrap section-skill" data-slide="4">
+	<div class="section">
+		<div class="skill-content section-content">
+      <div id="c11" >
+				<ul id="livelist1" class="live">
+					<li class="fade fade1">掌握HTML和具有兼容性的CSS，熟练手写符合W3C标准的结构和代码。</li>
+					<li class="fade fade3">对可用性、可访问性、前端性能优化、最优实践等有一定的了解和实践。</li>
+					<li class="fade fade2">熟悉HTML5和CSS3；了解Ajax工作原理和实现方法；</li>
+					<li class="fade fade4">熟练掌握Dreamweaver 、sublime、webStorm等前端开发工具。</li>
+					<li class="fade fade4">了解jQuery，实现日常需要的交互效果。</li>
+					<li class="fade fade3">了解Bootstrap框架，用栅格系统实现网页响应式设计。</li>
+					<li class="fade fade1">熟悉Photoshop、Firework等前端设计工具，使用GitHub托管代码</li>
+					<li class="fade fade1">从PSD上切出页面需要的图片，将小图标合成spirts优化。</li>
+					<li class="fade fade2">高效的自学能力，具备独立分析解决问题能力，强烈的自我驱动力,代码强迫症患者</li>
+				</ul>
+			</div>
+			<div id="c22" style="position:relative;display: none;height: 450px;width: 1004px;">
+				<div id="content">
+					<div class="legend">
+						<div class="skills">
+							<ul>
+								<li class="hl">HTML+CSS+JavaScript</li>
+								<li class="ps">Photoshop</li>
+								<li class="h5">HTML5+CSS3</li>
+								<li class="sql">SQL</li>
+								<li class="kj">框架</li>
+							</ul>
+						</div>
+					</div>
+					<div id="diagram"></div>
+				</div>
+				<div class="get">
+					<div class="arc">
+						<span class="text">HTML+CSS+JS</span>
+						<input type="hidden" class="percent" value="90" />
+						<input type="hidden" class="color" value="#97BE0D" />
+					</div>
+					<div class="arc">
+						<span class="text">Photoshop</span>
+						<input type="hidden" class="percent" value="84" />
+						<input type="hidden" class="color" value="#D84F5F" />
+					</div>
+					<div class="arc">
+						<span class="text">HTML5+CSS3</span>
+						<input type="hidden" class="percent" value="73" />
+						<input type="hidden" class="color" value="#88B8E6" />
+					</div>
+					<div class="arc">
+						<span class="text">SQL</span>
+						<input type="hidden" class="percent" value="65" />
+						<input type="hidden" class="color" value="#BEDBE9" />
+					</div>
+					<div class="arc">
+						<span class="text">框架</span>
+						<input type="hidden" class="percent" value="45" />
+						<input type="hidden" class="color" value="#EDEBEE" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="tabtn">
+			<div id="c1" style="background: #666;" ></div>
+			<div id="c2"></div>
+		</div>
+		<script type="text/javascript">
+			window.onload = function () {
+				var c1 = document.getElementById("c1");
+				var c2 = document.getElementById("c2");
+				var c11 = document.getElementById("c11");
+				var c22 = document.getElementById("c22");
+				c1.onclick = function (){
+					c11.style.display = "block";
+					c1.style.background = "#666";
+					c2.style.background = "#000";
+					c22.style.display = "none";
+				};
+				c2.onclick = function(){
+					c22.style.display = "block";
+					c11.style.display = "none";
+					c2.style.background = "#666";
+					c1.style.background = "#000";
+				}
+			}
+		</script>
+	</div>
+	<a class="button2 scroll-tip fade fade4"  data-slide="5" style="background:url(imgs/bg-down-arrow.png) no-repeat;" title="向下滚动">向下滚动</a>
+</div>
+
+
+<div id="contact" class="section-wrap section-contact" data-slide="5">
+	<div class="section">
+		<div class="contact-content clearfix section-content">
+			<div class="left">
+				<div class="contact-ways fade fade1">
+					<div class="code-editor">
+						<span class="control"></span><span class="control"></span><span class="control"></span>
+						<pre class="numbers linenums prettyprint prettyprinted">
+              <ol class="linenums"><li class="L0">
+                  <code class="css">
+                    <span class="pln">注</span>
+                    <span class="pun">重</span>
+                    <span class="str">效</span>
+                    <span class="pun">率</span>
+                    <span class="pln">，</span>
+                    <span class="kwd">偏</span>
+                    <span class="pun">爱</span>
+										<span class="str">敏</span>
+                    <span class="pun">捷</span>
+                    <span class="pln">开</span>
+                    <span class="kwd">发</span>
+                  </code>
+                </li><li class="L1">
+                  <code class="css">
+                    <span class="pln">喜</span>
+                    <span class="kwd">欢</span>
+                    <span class="pln">尝</span>
+                    <span class="pln">试</span>
+                    <span class="pun">，</span>
+                    <span class="pln">期</span>
+                    <span class="kwd">待</span>
+                    <span class="pun">新</span>
+                    <span class="typ">鲜</span>
+                    <span class="typ">事</span>
+                    <span class="str">物</span>
+                  </code></li><li class="L2">
+                <code class="css">
+									<span class="pln">前</span>
+                  <span class="pun">端</span>
+                  <span class="pln">即</span>
+                  <span class="pun">兴</span>
+                  <span class="pln">趣</span>
+                  <span class="kwd">，</span>
+                  <span class="pln">兴</span>
+                  <span class="typ">趣</span>
+                  <span class="pun">即</span>
+                  <span class="str">未</span>
+                  <span class="pun">来</span>
+                </code>
+							</li><li class="L3">
+                  <code class="css">
+                    <span class="pln">行</span>
+                    <span class="pun">路</span>
+                    <span class="pln">有</span>
+                    <span class="pun">良</span>
+                    <span class="pln">友</span>
+                    <span class="kwd">，</span>
+                    <span class="pln">便</span>
+                    <span class="typ">是</span>
+                    <span class="pun">捷</span>
+                    <span class="str">径</span>
+                  </code>
+                </li><li class="L4">
+                  <code class="css">
+                    <span class="pln">带</span>
+                    <span class="pun">上</span>
+                    <span class="pln">我</span>
+                    <span class="pun">吧</span>
+                    <span class="pln">，</span>
+                    <span class="kwd">一</span>
+                    <span class="pln">起</span>
+                    <span class="typ">看</span>
+                    <span class="pun">更</span>
+                    <span class="str">大</span>
+                    <span class="pun">的</span>
+                    <span class="typ">世</span>
+                    <span class="kwd">界</span>
+                  </code>
+                </li>
+							<li class="L5">
+                  <code class="css">
+                    <span class="pln"></span>
+                  </code>
+							</li></ol>
+            </pre>
+					</div>
+        </div>
+			</div>
+			<div class="right fade fade2">
+				<div class="demo">
+					<div class="container">
+						<div class="row">
+							<div class="navbar">联系我吧
+								<ul class="menu">
+									<li class="menu-list">
+                    <a target="_blank" href="http://weibo.com/wkmvip" class="fa fa-weibo" title="点击进入我的微博">
+                      <span class="fa-code"></span>
+                    </a>
+                  </li>
+									<li class="menu-list">
+                    <a target="_blank" href="#" class="fa fa-weixin" title="扫描添加我的微信">
+                      <span class="fa-code"></span>
+                    </a>
+                  </li>
+									<li class="menu-list">
+                    <a target="_blank" href="#" class="fa fa-QQ" title="扫描添加我的QQ">
+                      <span class="fa-code"></span>
+                    </a>
+                  </li>
+									<li class="menu-list"><a target="_blank" href="https://github.com/wkmcoder" class="fa fa-GitHub" title="点击进入我的GitHub"></a></li>
+									<li class="menu-list"><a target="_blank" href="mailto:wangkongmin@qq.com" class="fa fa-email" title="点击给我发邮件吧"></a></li>
+									<li class="menu-list"><a target="_blank" href="https://www.zhihu.com/people/wkmcoder" class="fa fa-zhihu" title="点击进入我的知乎"></a></li>
+									<li class="menu-list"><a target="_blank" href="https://segmentfult.com/u/wkmcoder" class="fa fa-segmentfault" title="点击进入我的segmentfault"></a></li>
+									<li class="menu-list"><a target="_blank" href="https://juejin.im/user/5966f76951882568af7f4251" class="fa fa-juejin" title="点击进入我的掘金"></a></li>
+									<li class="menu-list"><a target="_blank" href="#" class="fa fa-phone" title="" ><span class="fa-code"></span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<a class="button2 button2-2-top scroll-tip" id="gototops" data-slide="1" href="#top" style="background:url(imgs/bg-up-arrow.png) no-repeat;width:48px;height:48px;" title="回到首页">回到首页</a>
+</div>
+
+<div class="overlay"></div>
+<div class="state-indicator"></div>
+
+</body>
+</html>

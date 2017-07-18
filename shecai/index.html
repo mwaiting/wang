@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>摄彩主页</title>
+    <style>
+        body,html{font-family:微软雅黑,Arial;}
+        *{margin:0;padding:0;}
+        .header_top,.header_ad,.info{width:1024px;margin:0 auto;}
+        .header{background: #f1f1f1;height:80px;}
+        .header_top{width:1024px;margin:0 auto;height:80px;}
+        .header_top .logo{float:left;}
+        .header_list{margin:10px 20px;float:left;}
+
+        .header_list li{float:left;line-height: 30px;height: 30px;padding:0 70px;list-style:none;
+            margin:15px 0 0 0;text-align: center;}
+        .header_list li a:hover,.login:hover,.register:hover{color: #36aaea;}
+        .header_list li a{text-decoration:none;color:black;font-size:18px;}
+        .login,.register{float:right;line-height:50px;text-decoration: none;color:#000;
+            font-size:12px;padding:0 5px;}
+
+        #header_ad{height:600px;display:block;position:relative;}
+        .banner-nav{bottom:50px;height:150px;position: absolute;width:1024px;margin:0 auto;}
+        #img2,#img4{width:160px;height:100px;margin:25px 0;padding:0 3px;}
+        #img1,#img5{width:140px;height:84px;margin:35px 0;;padding:0 3px;}
+        #img3{width:200px;height:160px;margin:-5px 0;border:2px solid #cccccc;}
+        #img11{width:1024px;height:100%;margin:0 auto;}
+        #btn1,#btn2{width:75px;}
+        #btn1{float:left;}
+        #btn2{float:right;}
+
+
+        .footer{height:380px;}
+        .footer_f1{background:#eee;height:100px;padding:10px 0 0 0 ;}
+        .footime{width:300px;margin:0 auto;height:46px;line-height:46px;text-align:center;background: #46e3f7;}
+        .foot1{width:300px;margin:0 auto;height:46px;line-height:46px;text-align:center;background: #5bc0f7;}
+        .foot11{width:300px;margin:10px auto;padding:40px 0 0 0 }
+        .foot1 a{text-decoration: none;color:#fff;}
+        .foot1:hover{background: #36aaea;}
+        .foot2{height:51px;background:#333;}
+        .footer_search{height:50px;width:292px;margin:0 auto;padding:10px 0 0 0 ;}
+        .footer_search .txt{background: url("image/search.png") 0 no-repeat;height:31px;width:240px;
+            display:inline-block;border:0;outline:none;float:left;color:#999;}
+        .footer_search .btn{background: url("image/search.png")-250px  0 no-repeat;height:31px;
+            width:42px;display:inline-block;border:0;}
+
+        .foot3{background:#585657;height:250px;}
+        .info{background:#585657}
+        .info span{color:#ccc;margin:10px 0;font-size:14px;display: inline-block;}
+        .info a,.info ul li p{color:#eee;text-decoration:none;font-size:14px;height:23px;line-height:23px;}
+        .info ul{list-style: none;float:left;width:200px;text-align: center;background:#585657;}
+        .info a:hover{text-decoration:underline;color:#36aaea }
+
+
+
+    </style>
+    <script>
+        window.onload = function(){
+            var oBtn1=document.getElementById("btn1");
+            var oBtn2=document.getElementById("btn2");
+            var oImg1=document.getElementById("img1");
+            var oImg2=document.getElementById("img2");
+            var oImg3=document.getElementById("img3");
+            var oImg4=document.getElementById("img4");
+            var oImg5=document.getElementById("img5");
+            var oImg11=document.getElementById("img11");
+            var oLink=document.getElementById("link");
+            var oJump=document.getElementById("jump");
+
+            var arrUrl=["image/renxiang.jpg","image/hunsha.jpeg","image/fengjing.jpg","image/jingwu.jpg",
+                "image/renwen.jpg","image/dongwu.jpg","image/meishi.jpg","image/suishoupai.jpeg",
+                "image/renxiang.jpg","image/hunsha.jpeg","image/fengjing.jpg","image/jingwu.jpg"];
+
+            var arrImg=["jingwu.html","renxiang.html","hunsha.html","fengjing.html","jingwu.html",
+                "renwen.html","dongwu.html","meishi.html","suishoupai.html","renxiang.html",
+                "hunsha.html","fengjing.html"];
+            var num=0;
+            //上一页
+            oBtn1.onclick=function(){
+                num--;
+                if(num==-1){
+                    num=arrUrl.length-5;
+                }
+                fnTab();
+                fnJump();
+            };
+            //下一页
+            oBtn2.onclick=function(){
+                num++;
+                if(num==arrUrl.length-4){
+                    num=0;
+                }
+                fnTab();
+                fnJump();
+            };
+            //图片切换函数
+            function fnTab(){
+                oImg1.src=arrUrl[num];
+                oImg2.src=arrUrl[num+1];
+                oImg3.src=arrUrl[num+2];
+                oImg4.src=arrUrl[num+3];
+                oImg5.src=arrUrl[num+4];
+                oImg11.src=arrUrl[num+2];
+                oImg3.style.border="2px solid #3EE1E9";
+            }
+            function fnJump(){
+                oLink.href=arrImg[num+3];
+                oJump.href=arrImg[num+3];
+            }
+
+            //        系统时间对象
+            //alert(new Date());//当前系统时间对象
+            var oBody = document.body;
+            setInterval(fnTime,1);
+            fnTime();
+            function fnTime(){
+                var myTime = new Date();
+//number
+                var iYear = myTime.getFullYear();
+                var iMonth = myTime.getMonth() + 1;
+                var iDate = myTime.getDate();
+                var iWeek = myTime.getDay();
+                var iHours = myTime.getHours();
+                var iMin = myTime.getMinutes();
+                var iSec = myTime.getSeconds();
+                var oTime=document.getElementById('time')
+                var str = '';
+                if (iWeek === 0)iWeek = '星期日';
+                if (iWeek === 1)iWeek = '星期一';
+                if (iWeek === 2)iWeek = '星期二';
+                if (iWeek === 3)iWeek = '星期三';
+                if (iWeek === 4)iWeek = '星期四';
+                if (iWeek === 5)iWeek = '星期五';
+                if (iWeek === 6)iWeek = '星期六';
+                str = iYear + '年' + iMonth + '月' + iDate + '日' + ' ' + iWeek + ' '
+                        + toTwo(iHours )+ ':' + toTwo(iMin) + ':' + toTwo(iSec);
+//alert(str);
+                oTime.innerHTML = str;
+            }
+
+            //alert(toTwo(5))
+            function toTwo(n){
+                //        if(n<10){
+                //            return '0'+n;
+                //        }else{
+                //            return ''+ n;
+                //        }
+                return n<10 ? '0'+n :''+ n;
+            }
+
+        };
+
+    </script>
+</head>
+
+<body>
+
+<div class="header">
+    <div class="header_top">
+        <a href="#"><img class="logo" src="image/logo.png" alt=""></a>
+        <ul class="header_list">
+            <li><a href="forum.html#set1" target="_blank"><h5>视觉系，盛宴如斯</h5></a></li>
+            <li><a href="forum.html#wenyi" target="_blank"><h5>文艺范儿，就是我</h5></a></li>
+            <li><a href="forum.html#life" target="_blank"><h5>爱生活,爱摄彩</h5></a></li>
+        </ul>
+        <a class="register" href="register.html" target="_blank">注册</a>
+        <a class="login" href="login.html" target="_blank">登录</a>
+
+    </div>
+</div>
+
+<div style="height:600px;width:1024px;margin:0 auto;display:block!important;position:relative;" id="header_ad">
+    <a  id="jump"   href="fengjing.html" target="_blank">
+        <img id="img11" src="image/fengjing.jpg" alt="" title="">
+    </a>
+    <div class="banner-nav">
+        <img id="img1" src="image/renxiang.jpg" alt="" title="">
+        <img id="img2" src="image/hunsha.jpeg" alt="" title="">
+        <a id="link" href="fengjing.html" target="_blank">
+            <img id="img3" src="image/fengjing.jpg" title="">
+        </a>
+        <img id="img4" src="image/jingwu.jpg" alt="" title="">
+        <img id="img5" src="image/renwen.jpg" alt="" title="">
+        <a id="btn1" href="javascript:;"><img src="image/prev.png" alt=""></a>
+        <a id="btn2" href="javascript:;"><img src="image/next.png" alt=""></a>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="foot11">
+        <audio controls="controls" preload>
+            <source src="music/mzdhl.mp3" type="audio/mp3" />
+        </audio>
+    </div>
+    <div class="footer_f1">
+        <div class="footime" id="time">
+        </div>
+        <div class="foot1">
+            <a href="register.html" target="_blank">→ 立即注册，开始摄彩之旅</a>
+        </div>
+
+
+    </div>
+    <div class="foot2">
+        <div  class="footer_search">
+
+            <input class="txt" type="text" value="你想找的，这里都有">
+            <a href="#" class="btn" value=""></a>
+        </div>
+    </div>
+    <div class="foot3">
+        <div class="info">
+            <ul>
+                <span>摄彩主页</span>
+                <li ><a href="#" target="_blank">主页</a></li>
+                <li ><a href="jianli.html" target="_blank">web简历</a></li>
+                <li ><a href="forum.html">最新资讯</a></li>
+                <li ><a href="about.html">关于我们</a></li>
+                <li ><a href="login.html" target="_blank">登录</a></li>
+                <li ><a href="register.html" target="_blank">注册</a></li>
+            </ul>
+            <ul>
+                <span id="linker">友情链接</span>
+                <li ><a href="http://www.sheying8.com/" target="_blank">摄影吧</a></li>
+                <li ><a href="http://www.fengniao.com/" target="_blank">蜂鸟网</a></li>
+                <li ><a href="http://photo.sina.com.cn/" target="_blank">新浪图片</a></li>
+                <li ><a href="http://www.cpanet.cn/" target="_blank">影像中国</a></li>
+                <li ><a href="http://photo.poco.cn/" target="_blank">POCO摄影网</a></li>
+                <li ><a href="https://tuchong.com/" target="_blank">图虫</a></li>
+            </ul>
+            <ul>
+                <span>摄彩版块</span>
+                <li ><a href="renxiang.html" target="_blank">人像</a></li>
+                <li ><a href="hunsha.html" target="_blank">婚纱</a></li>
+                <li ><a href="fengjing.html" target="_blank">风景</a></li>
+                <li ><a href="jingwu.html" target="_blank">静物</a></li>
+                <li ><a href="renwen.html" target="_blank">人文</a></li>
+                <li ><a href="dongwu.html" target="_blank">动物</a></li>
+                <li ><a href="meishi.html" target="_blank">美食</a></li>
+                <li ><a href="suishoupai.html" target="_blank">随手拍</a></li>
+            </ul>
+            <ul>
+                <span>常见问题</span>
+                <li ><a href="jubao.html" target="_blank">侵权举报</a></li>
+                <li ><a href="banquan.html">版权保护</a></li>
+                <li ><a href="fankui.html">我要反馈</a></li>
+            </ul>
+            <ul>
+                <span>联系我们</span>
+                <li ><p>电话/Phone: 1.234.567.8901</p></li>
+                <li ><p>QQ: 1.234.567.8901</p></li>
+                <li ><p>微信: 1.234.567.8901</p></li>
+                <li ><a href="mailto:0000000000000@qq.com">邮件:Send us an email</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+
+
+#content {
+position:absolute;
+width:960px;
+height:450px;
+}
+
+.legend {
+float:left;
+width:250px;
+margin-top:140px;
+}
+
+.skills {
+float:left;
+clear:both;
+width:100%;
+}
+
+.skills ul,
+.skills li {
+display:block;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.skills li {
+float:right;
+clear:both;
+padding:0 15px;
+height:35px;
+line-height:35px;
+color:#000;
+margin-bottom:1px;
+font-size:18px;
+}
+
+.skills .hl {
+background:#97BE0D;
+}
+
+.skills .ps {
+background:#D84F5F;
+}
+
+.skills .h5 {
+background:#88B8E6;
+}
+
+.skills .sql {
+background:#BEDBE9;
+}
+
+.skills .kj {
+background:#EDEBEE;
+}
+
+#diagram {
+float:right;
+width:600px;
+height:450px;
+margin-top: -55px;
+
+}
+
+.get {
+display:none;
+}
+
+/* ------ anchors
+-----------------------------------------------*/
+
+a {
+text-decoration:none;
+color:#333;
+}
+
